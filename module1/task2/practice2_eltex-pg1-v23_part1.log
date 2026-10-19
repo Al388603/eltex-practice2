@@ -1,0 +1,811 @@
+Script started on 2026-10-19 09:32:29+07:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="93" LINES="50"]
+[?2004h]0;eltex-pg1-v23@eltex-2026-autumn: ~eltex-pg1-v23@eltex-2026-autumn:~$ ls -l practice2_${MU[KYUSER}_part1.log
+[?2004l-rw-r--r-- 1 eltex-pg1-v23 eltex-pg1-v23 233 Oct 19 09:33 practice2_eltex-pg1-v23_part1.log
+[?2004h]0;eltex-pg1-v23@eltex-2026-autumn: ~eltex-pg1-v23@eltex-2026-autumn:~$ ssh [K-keygen -t ed25519 -f `[K~\[K|[K//[K.ssh/practice1_key -N ""
+[?2004lGenerating public/private ed25519 key pair.
+Created directory '/home/eltex-pg1-v23/.ssh'.
+Your identification has been saved in /home/eltex-pg1-v23/.ssh/practice1_key
+Your public key has been saved in /home/eltex-pg1-v23/.ssh/practice1_key.pub
+The key fingerprint is:
+SHA256:mm0ZmmDxjIQoIJvIGsONGMPPCOVPww13uDgjaNms5+E eltex-pg1-v23@eltex-2026-autumn
+The key's randomart image is:
++--[ED25519 256]--+
+|*.. . ...        |
+|OOoo +..         |
+|@=X.*...         |
+|+*.O+*.          |
+|o ..=oo S        |
+| . + . * o       |
+|  + . = +        |
+|   E   .         |
+|                 |
++----[SHA256]-----+
+[?2004h]0;eltex-pg1-v23@eltex-2026-autumn: ~eltex-pg1-v23@eltex-2026-autumn:~$ ls -la ~//[K.ssh/practice1_key8[K*
+[?2004l-rw------- 1 eltex-pg1-v23 eltex-pg1-v23 432 Oct 19 09:34 /home/eltex-pg1-v23/.ssh/practice1_key
+-rw-r--r-- 1 eltex-pg1-v23 eltex-pg1-v23 113 Oct 19 09:34 /home/eltex-pg1-v23/.ssh/practice1_key.pub
+[?2004h]0;eltex-pg1-v23@eltex-2026-autumn: ~eltex-pg1-v23@eltex-2026-autumn:~$ cat ~//[K.ssh/practi[Kice1_key.pub
+[?2004lssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINcVeunyiIYKmWF8Ha1mGZToFmGs976W3sBPImfq0D5Q eltex-pg1-v23@eltex-2026-autumn
+[?2004h]0;eltex-pg1-v23@eltex-2026-autumn: ~eltex-pg1-v23@eltex-2026-autumn:~$ sh[Ksh-copy-id -i ~/.ssh/practice1_key.pub root@172.16.9.197
+[?2004l/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/eltex-pg1-v23/.ssh/practice1_key.pub"
+The authenticity of host '172.16.9.197 (172.16.9.197)' can't be established.
+ED25519 key fingerprint is SHA256:YNVzj+RtetZfXv5XUn/CUjeEcaMD4eg3jy8EuGGIS+o.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+root@172.16.9.197's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'root@172.16.9.197'"
+and check to make sure that only the key(s) you wanted were added.
+
+[?2004h]0;eltex-pg1-v23@eltex-2026-autumn: ~eltex-pg1-v23@eltex-2026-autumn:~$ ssh -i ~/.ssh/practice1_key root@172.16.9.197
+[?2004lWelcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-147-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Oct 19 02:40:46 AM UTC 2026
+
+  System load:  0.04               Processes:              113
+  Usage of /:   41.4% of 14.66GB   Users logged in:        0
+  Memory usage: 5%                 IPv4 address for ens18: 172.16.9.197
+  Swap usage:   0%
+
+ * Canonical Workshop gives developers fast, composable, reproducible, and
+   secure developer environments that are perfect for agentic workflows.
+
+   https://ubuntu.com/workshop
+
+Expanded Security Maintenance for Applications is not enabled.
+
+108 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+New release '26.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls -la /root/.ssh/
+[?2004ltotal 12
+drwx------ 2 root root 4096 Mar 12  2025 [0m[01;34m.[0m
+drwx------ 4 root root 4096 Oct 14 08:07 [01;34m..[0m
+-rw------- 1 root root  113 Oct 19 02:38 authorized_keys
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# cat /root/.ssh/authorized_keys
+[?2004lssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINcVeunyiIYKmWF8Ha1mGZToFmGs976W3sBPImfq0D5Q eltex-pg1-v23@eltex-2026-autumn
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# start -c '%a %U:%G %n' /root.ssh /root/.ssh/authorix[Kzed_keys
+[?2004lCommand 'start' not found, did you mean:
+  command 'stars' from snap stars (2.7jrc3)
+  command 'stat' from deb coreutils (9.4-3ubuntu6.2)
+  command 'kstart' from deb kde-cli-tools (4:5.27.12-0ubuntu0.1)
+  command 'startx' from deb xinit (1.4.1-0ubuntu4)
+  command 'rstart' from deb x11-session-utils (7.7+6)
+See 'snap info <snapname>' for additional versions.
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# stat -c '%a %U:%G %n' /root/.ssh /root/.ssh/authorized_keys
+[?2004l700 root:root /root/.ssh
+600 root:root /root/.ssh/authorized_keys
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ssh -p 44556 eltex-pg1-v23@217.71.138.1 'cat ~//[K,[K.ssh/practicel [K[A[K]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ssh -p 44556 eltex-pg1-v23@217.71.138.1 'cat ~/.ssh/practicel[K1_key/[K.pub'>[K > /t mp/s1_key.pub
+[?2004l
+^C
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# [K]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ssh -p 44555[K6 eltex-pg1-v23@217.71.71[K[K138.1 'cat ~/.ssh/practice1_key/[K.pub'
+[?2004l
+^C
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# exit
+[?2004llogout
+Connection to 172.16.9.197 closed.
+[?2004h]0;eltex-pg1-v23@eltex-2026-autumn: ~eltex-pg1-v23@eltex-2026-autumn:~$ scp -i ~/.ssh/practice1_key ~//[K.ssh/practice1_key.pub root@172.16.91[K.197 [K[A[K]0;eltex-pg1-v23@eltex-2026-autumn: ~eltex-pg1-v23@eltex-2026-autumn:~$ scp -i ~/.ssh/practice1_key ~/.ssh/practice1_key.pub root@172.16.9.197[K]0;eltex-pg1-v23@eltex-2026-autumn: ~eltex-pg1-v23@eltex-2026-autumn:~$ scp -i ~/.ssh/practice1_key ~/.ssh/practice1_key.pub root@172.16.9.197^[K:/tmp/
+[?2004lpractice1_key.pub                                                                   0%    0     0.0KB/s   --:-- ETApractice1_key.pub                                                                 100%  113   392.1KB/s   00:00    
+[?2004h]0;eltex-pg1-v23@eltex-2026-autumn: ~eltex-pg1-v23@eltex-2026-autumn:~$ ssh -i ~//[K.ssh/practice1-[K[K1_key riit [K[K[K[Koot [K@172.16.9.197
+[?2004lWelcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-147-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Oct 19 02:53:58 AM UTC 2026
+
+  System load:  0.04               Processes:              113
+  Usage of /:   41.4% of 14.66GB   Users logged in:        0
+  Memory usage: 5%                 IPv4 address for ens18: 172.16.9.197
+  Swap usage:   0%
+
+ * Canonical Workshop gives developers fast, composable, reproducible, and
+   secure developer environments that are perfect for agentic workflows.
+
+   https://ubuntu.com/workshop
+
+Expanded Security Maintenance for Applications is not enabled.
+
+108 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+New release '26.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Mon Oct 19 02:40:47 2026 from 172.16.8.4
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls -l /tmp/practice1_key.pub
+[?2004l-rw-r--r-- 1 root root 113 Oct 19 02:53 /tmp/practice1_key.pub
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# diff -u /tmp/practice1_key_[K.pub /root/.shh/authorized_keys || true
+[?2004ldiff: /root/.shh/authorized_keys: No such file or directory
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# diff -u /tmp/practice1_key.pub /root/.a[Kssh/authorized_keys || true
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# grep -Ff /tmp/practice1_key.pub /root/.shh/[K[K[Ksh/authorized_keys && echo OK_FOUND
+[?2004l[01;31m[Kssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINcVeunyiIYKmWF8Ha1mGZToFmGs976W3sBPImfq0D5Q eltex-pg1-v23@eltex-2026-autumn[m[K
+OK_FOUND
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# useradd -m 0[K-s /bin/bash user1
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# passwd user1
+[?2004lNew password: 
+Retype new password: 
+passwd: password updated successfully
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# getent passwd user1
+[?2004luser1:x:1001:1001::/home/user1:/bin/bash
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls -ld /home/user1
+[?2004ldrwxr-x--- 2 user1 user1 4096 Oct 19 03:02 [0m[01;34m/home/user1[0m
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# addusw[Ker user2
+[?2004linfo: Adding user `user2' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `user2' (1002) ...
+info: Adding new user `user2' (1002) with group `user2 (1002)' ...
+info: Creating home directory `/home/user2' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for user2
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] y Y
+info: Adding new user `user2' to supplemental / extra groups `users' ...
+info: Adding user `user2' to group `users' ...
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# adduser user3
+[?2004linfo: Adding user `user3' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `user3' (1003) ...
+info: Adding new user `user3' (1003) with group `user3 (1003)' ...
+info: Creating home directory `/home/user3' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for user3
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] Y
+info: Adding new user `user3' to supplemental / extra groups `users' ...
+info: Adding user `user3' to group `users' ...
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# getent passwd user2
+[?2004luser2:x:1002:1002:,,,:/home/user2:/bin/bash
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# getent passwd user [K3
+[?2004luser3:x:1003:1003:,,,:/home/user3:/bin/bash
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# usw[Kermod -s /usr/sbin/nologin user3
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# getent passwd user3
+[?2004luser3:x:1003:1003:,,,:/home/user3:/usr/sbin/nologin
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# su - user3
+[?2004lThis account is currently not available.
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# su -s /bu[Kin/basg[Kh user3
+[?2004l[?2004h]0;user3@eltex-practice2-pg1-v23: /rootuser3@eltex-practice2-pg1-v23:/root$ whoami
+[?2004luser3
+[?2004h]0;user3@eltex-practice2-pg1-v23: /rootuser3@eltex-practice2-pg1-v23:/root$ exit
+[?2004lexit
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# groupadd prace[Kticegrp
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# usermod -aG practicegrp user1
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# usermod -aG practicegrp user2
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# usermod -aG practicegrp user3
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# id user1
+[?2004luid=1001(user1) gid=1001(user1) groups=1001(user1),1004(practicegrp)
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# id user2
+[?2004luid=1002(user2) gid=1002(user2) groups=1002(user2),100(users),1004(practicegrp)
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# id user3
+[?2004luid=1003(user3) gid=1003(user3) groups=1003(user3),100(users),1004(practicegrp)
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# mkdir -p /opt/share
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# chgrp practicegrp /opt/share
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# chmod 2770 /opt/share
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# is -id /[K[K[K[K[K[K[K[Kla[Ks -ld /ppt[K[K[Kopt/share
+[?2004ldrwxrws--- 2 root practicegrp 4096 Oct 19 03:14 [0m[01;34m/opt/share[0m
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# stat -c '%a "U:%G %n' /opt/share
+[?2004l2770 "U:practicegrp /opt/share
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# echo 'umask 027' >> /home/user1/.profile
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# chown user1:user1 / [Khome/user1/.profile
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# tail -n 3 /home/user1/.pri[Kofile
+[?2004l    PATH="$HOME/.local/bin:$PATH"
+fi
+umask 027
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# su - user1 -c 'umask'
+[?2004l0027
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# su - user1 -c 'touch /opt/share/u1_file; ls -l /opt/share/u1_file'
+[?2004l-rw-r----- 1 user1 practicegrp 0 Oct 19 03:20 /opt/share/u1_file
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# su -muser2 [K[K[K[K[K[K[K user2 -c 'touch /opt/share/u2_file; ls -l /opt/share/u2_file'
+[?2004l-rw-rw-r-- 1 user2 practicegrp 0 Oct 19 03:21 /opt/share/u2_file
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# su - user3 -s /bin/bash -c 'touch /opt/share/u3_file; ls -l /opt/share/u3_file'
+[?2004l-rw-rw-r-- 1 user3 practicegrp 0 Oct 19 03:22 /opt/share/u3_file
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls -la \[K/opt/share
+[?2004ltotal 8
+drwxrws--- 2 root  practicegrp 4096 Oct 19 03:22 [0m[01;34m.[0m
+drwxr-xr-x 3 root  root        4096 Oct 19 03:14 [01;34m..[0m
+-rw-r----- 1 user1 practicegrp    0 Oct 19 03:20 u1_file
+-rw-rw-r-- 1 user2 practicegrp    0 Oct 19 03:21 u2_file
+-rw-rw-r-- 1 user3 practicegrp    0 Oct 19 03:22 u3_file
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# su - user1 -c 'r,[Km -v /opt/share/u2_file /opt/share/u3_file'
+[?2004lremoved '/opt/share/u2_file'
+removed '/opt/share/u3_file'
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls -la /opt/share
+[?2004ltotal 8
+drwxrws--- 2 root  practicegrp 4096 Oct 19 03:23 [0m[01;34m.[0m
+drwxr-xr-x 3 root  root        4096 Oct 19 03:14 [01;34m..[0m
+-rw-r----- 1 user1 practicegrp    0 Oct 19 03:20 u1_file
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# chmod +t /opt/share
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# is [K[K[Kls -ld /opt/share
+[?2004ldrwxrws--T 2 root practicegrp 4096 Oct 19 03:23 [0m[37;44m/opt/share[0m
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# su - user1 -c 'touch /opt/share/u1_file2; ls -l /opt/share/u1_file2'
+[?2004l-rw-r----- 1 user1 practicegrp 0 Oct 19 03:25 /opt/share/u1_file2
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# su - user2 -c 'touch /opt/share/u2_file2; i[Kls -l /opt/share.[K/u2_file2;[K'
+[?2004l-rw-rw-r-- 1 user2 practicegrp 0 Oct 19 03:26 /opt/share/u2_file2
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# su - user2 -s [K[K[K[K[K3 -s /bim[Kn/bash -c 'touch /opt/share/u3_file2; ls -l /opt/share/u3_file2'
+[?2004l-rw-rw-r-- 1 user3 practicegrp 0 Oct 19 03:27 /opt/share/u3_file2
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls -la /opt/share
+[?2004ltotal 8
+drwxrws--T 2 root  practicegrp 4096 Oct 19 03:27 [0m[37;44m.[0m
+drwxr-xr-x 3 root  root        4096 Oct 19 03:14 [01;34m..[0m
+-rw-r----- 1 user1 practicegrp    0 Oct 19 03:20 u1_file
+-rw-r----- 1 user1 practicegrp    0 Oct 19 03:25 u1_file2
+-rw-rw-r-- 1 user2 practicegrp    0 Oct 19 03:26 u2_file2
+-rw-rw-r-- 1 user3 practicegrp    0 Oct 19 03:27 u3_file2
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# su - ua[Kser1 -c 'rm -v /opt/share/u2_file2 /opt/share/u2[K3-[K_file2' || true [K
+[?2004lrm: cannot remove '/opt/share/u2_file2': Operation not permitted
+rm: cannot remove '/opt/share/u3_file2': Operation not permitted
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# su - user2 - [Kc 'r,[Km -v /opt/share/u1a-[K[K[K1_file2' || true
+[?2004lrm: remove write-protected regular empty file '/opt/share/u1_file2'? y
+rm: cannot remove '/opt/share/u1_file2': Operation not permitted
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls -la /opt/share
+[?2004ltotal 8
+drwxrws--T 2 root  practicegrp 4096 Oct 19 03:27 [0m[37;44m.[0m
+drwxr-xr-x 3 root  root        4096 Oct 19 03:14 [01;34m..[0m
+-rw-r----- 1 user1 practicegrp    0 Oct 19 03:20 u1_file
+-rw-r----- 1 user1 practicegrp    0 Oct 19 03:25 u1_file2
+-rw-rw-r-- 1 user2 practicegrp    0 Oct 19 03:26 u2_file2
+-rw-rw-r-- 1 user3 practicegrp    0 Oct 19 03:27 u3_file2
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# visudo -f /ets[Kc/sudoers.d/user1-dmesg
+[?2004l[?2004h[?1049h[22;0;0t[1;50r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[48;52H(B[0;7m[ Reading... ](B[m[48;51H(B[0;7m[ Read 0 lines ](B[m[H(B[0;7m  GNU nano 7.2                               /etc/sudoers.d/user1-dmesg.tmp                                         [1;115H(B[m[49d(B[0;7m^G(B[m Help[49;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[49;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[50d(B[0;7m^X(B[m Exit[50;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[50;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[2d[?12l[?25h[?25l[1;77H(B[0;7m*[115G(B[m[?12l[?25h[2du[?25l[?12l[?25hs[?25l[?12l[?25he[?25l[?12l[?25hr[?25l[?12l[?25h1[?25l[?12l[?25h [?25l[?12l[?25hA[?25l[?12l[?25hL[?25l[?12l[?25hL[?25l[?12l[?25h=[?25l[?12l[?25h([?25l[?12l[?25hr[?25l[?12l[?25ho[?25l[?12l[?25ho[?25l[?12l[?25ht[?25l[?12l[?25h)[?25l[?12l[?25h [?25l[?12l[?25hN[?25l[?12l[?25hO[?25l[48d[K[?12l[?25h[2;20HP[?25l[?12l[?25hA[?25l[?12l[?25hS[?25l[?12l[?25hS[?25l[?12l[?25hW[?25l[?12l[?25hD[?25l[?12l[?25h:[?25l[?12l[?25h [?25l[?12l[?25h/[?25l[?12l[?25hb[?25l[?12l[?25hi[?25l[?12l[?25hn[?25l[?12l[?25h/[?25l[?12l[?25hd[?25l[?12l[?25hm[?25l[?12l[?25he[?25l[?12l[?25hs[?25l[?12l[?25hg[?25l[3d[?12l[?25h[?25l[49;17H             (B[0;7mM-D(B[m DOS Format[15X[49;59H(B[0;7mM-A(B[m Append      [81G       (B[0;7mM-B(B[m Backup File[K[50;2H(B[0;7mC(B[m Cancel[17G             (B[0;7mM-M(B[m Mac Format[15X[50;59H(B[0;7mM-P(B[m Prepend     [81G       (B[0;7m^T(B[m Browse[K[48d(B[0;7mFile Name to Write: /etc/sudoers.d/user1-dmesg.tmp                                                                  [48;51H(B[m[?12l[?25h[?25l[1K (B[0;7m[ Writing... ](B[m[K[1;77H(B[0;7m [115G(B[m[48;50H(B[0;7m[ Wrote 2 lines ](B[m[49;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut          (B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[50;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste        (B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[?12l[?25h[3d[?25l[48d[J[50d[?12l[?25h[50;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# su - user [K1
+[?2004l[?2004h]0;user1@eltex-practice2-pg1-v23: ~user1@eltex-practice2-pg1-v23:~$ sudo -l
+[?2004lMatching Defaults entries for user1 on eltex-practice2-pg1-v23:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin, use_pty
+
+User user1 may run the following commands on eltex-practice2-pg1-v23:
+    (root) NOPASSWD: /bin/dmesg
+[?2004h]0;user1@eltex-practice2-pg1-v23: ~user1@eltex-practice2-pg1-v23:~$ si[Kudo dmesg | head
+[?2004l[    0.000000] Linux version 6.8.0-147-generic (buildd@lcy02-amd64-081) (x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #147-Ubuntu SMP PREEMPT_DYNAMIC Thu Sep 24 11:33:16 UTC 2026 (Ubuntu 6.8.0-147.147-generic 6.8.12)
+[    0.000000] Command line: BOOT_IMAGE=/vmlinuz-6.8.0-147-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Hygon HygonGenuine
+[    0.000000]   Centaur CentaurHauls
+[    0.000000]   zhaoxin   Shanghai  
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[?2004h]0;user1@eltex-practice2-pg1-v23: ~user1@eltex-practice2-pg1-v23:~$ exit
+[?2004llogout
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# apt update
+[?2004l[33m0% [Working][0m            Hit:1 http://ru.archive.ubuntu.com/ubuntu noble InRelease
+[33m0% [Waiting for headers][0m                        Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+[33m0% [Waiting for headers][0m[33m0% [Waiting for headers][0m                        Get:3 http://ru.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+[33m0% [3 InRelease 11.8 kB/126 kB 9%][0m[33m0% [3 InRelease 11.8 kB/126 kB 9%][0m[33m                                  0% [Working][0m[33m0% [Waiting for headers][0m                        Get:4 http://ru.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+[33m0% [4 InRelease 9,336 B/126 kB 7%][0m[33m                                  0% [Working][0m[33m100% [Working][0m              Fetched 252 kB in 1s (494 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 41%Reading package lists... 41%Reading package lists... 57%Reading package lists... 57%Reading package lists... 57%Reading package lists... 57%Reading package lists... 58%Reading package lists... 58%Reading package lists... 61%Reading package lists... 61%Reading package lists... 64%Reading package lists... 64%Reading package lists... 69%Reading package lists... 69%Reading package lists... 73%Reading package lists... 73%Reading package lists... 78%Reading package lists... 78%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 83%Reading package lists... 83%Reading package lists... 85%Reading package lists... 85%Reading package lists... 90%Reading package lists... 90%Reading package lists... 94%Reading package lists... 94%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+88 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[33mN: [0mMissing Signed-By in the sources.list(5) entry for 'http://ru.archive.ubuntu.com/ubuntu'[0m
+[33mN: [0mMissing Signed-By in the sources.list(5) entry for 'http://ru.archive.ubuntu.com/ubuntu'[0m
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# apt install -y gcc
+[?2004lReading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  binutils binutils-common binutils-x86-64-linux-gnu cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu
+  gcc-13 gcc-13-base gcc-13-x86-64-linux-gnu gcc-x86-64-linux-gnu libasan8 libatomic1 libbinutils libcc1-0
+  libctf-nobfd0 libctf0 libgcc-13-dev libgomp1 libgprofng0 libhwasan0 libisl23 libitm1 liblsan0 libmpc3
+  libquadmath0 libsframe1 libtsan2 libubsan1
+Suggested packages:
+  binutils-doc gprofng-gui cpp-doc gcc-13-locales cpp-13-doc gcc-multilib make autoconf automake libtool flex
+  bison gdb gcc-doc gcc-13-multilib gcc-13-doc gdb-x86-64-linux-gnu
+The following NEW packages will be installed:
+  binutils binutils-common binutils-x86-64-linux-gnu cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu gcc
+  gcc-13 gcc-13-base gcc-13-x86-64-linux-gnu gcc-x86-64-linux-gnu libasan8 libatomic1 libbinutils libcc1-0
+  libctf-nobfd0 libctf0 libgcc-13-dev libgomp1 libgprofng0 libhwasan0 libisl23 libitm1 liblsan0 libmpc3
+  libquadmath0 libsframe1 libtsan2 libubsan1
+0 upgraded, 30 newly installed, 0 to remove and 88 not upgraded.
+Need to get 50.5 MB of archives.
+After this operation, 167 MB of additional disk space will be used.
+[33m0% [Working][0m            Get:1 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils-common amd64 2.42-4ubuntu2.10 [240 kB]
+[33m0% [1 binutils-common 11.8 kB/240 kB 5%][0m[33m                                        1% [Working][0m            Get:2 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libsframe1 amd64 2.42-4ubuntu2.10 [15.7 kB]
+[33m1% [2 libsframe1 14.2 kB/15.7 kB 90%][0m[33m                                     2% [Waiting for headers][0m                        Get:3 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libbinutils amd64 2.42-4ubuntu2.10 [577 kB]
+[33m2% [3 libbinutils 19.9 kB/577 kB 3%][0m[33m                                    3% [Waiting for headers][0m                        Get:4 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libctf-nobfd0 amd64 2.42-4ubuntu2.10 [98.0 kB]
+[33m3% [4 libctf-nobfd0 15.3 kB/98.0 kB 16%][0m[33m                                        4% [Waiting for headers][0m                        Get:5 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libctf0 amd64 2.42-4ubuntu2.10 [94.5 kB]
+[33m4% [5 libctf0 14.8 kB/94.5 kB 16%][0m[33m                                  5% [Waiting for headers][0m                        Get:6 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgprofng0 amd64 2.42-4ubuntu2.10 [849 kB]
+[33m5% [6 libgprofng0 21.3 kB/849 kB 3%][0m[33m                                    7% [Waiting for headers][0m                        Get:7 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.42-4ubuntu2.10 [2,463 kB]
+[33m7% [7 binutils-x86-64-linux-gnu 24.2 kB/2,463 kB 1%][0m[33m                                                    12% [Working][0m             Get:8 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils amd64 2.42-4ubuntu2.10 [18.2 kB]
+[33m12% [8 binutils 2,820 B/18.2 kB 16%][0m[33m                                    12% [Working][0m             Get:9 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-base amd64 13.3.0-6ubuntu2~24.04.1 [51.6 kB]
+[33m12% [9 gcc-13-base 14.5 kB/51.6 kB 28%][0m[33m                                       13% [Waiting for headers][0m                         Get:10 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libisl23 amd64 0.26-3build1.1 [680 kB]
+[33m13% [10 libisl23 18.5 kB/680 kB 3%][0m[33m                                   15% [Waiting for headers][0m                         Get:11 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libmpc3 amd64 1.3.1-1build1.1 [54.6 kB]
+[33m15% [11 libmpc3 13.7 kB/54.6 kB 25%][0m[33m                                    15% [Waiting for headers][0m                         Get:12 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1 [10.7 MB]
+[33m16% [12 cpp-13-x86-64-linux-gnu 14.2 kB/10.7 MB 0%][0m[33m                                                   33% [Waiting for headers][0m                         Get:13 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13 amd64 13.3.0-6ubuntu2~24.04.1 [1,042 B]
+[33m34% [Waiting for headers][0m                         Get:14 http://ru.archive.ubuntu.com/ubuntu noble/main amd64 cpp-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [5,326 B]
+[33m34% [14 cpp-x86-64-linux-gnu 5,326 B/5,326 B 100%][0m[33m                                                  34% [Working][0m             Get:15 http://ru.archive.ubuntu.com/ubuntu noble/main amd64 cpp amd64 4:13.2.0-7ubuntu1 [22.4 kB]
+[33m35% [15 cpp 22.4 kB/22.4 kB 100%][0m[33m                                 35% [Waiting for headers][0m                         Get:16 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libcc1-0 amd64 14.2.0-4ubuntu2~24.04.1 [48.0 kB]
+[33m35% [16 libcc1-0 35.7 kB/48.0 kB 74%][0m[33m                                     36% [Working][0m             Get:17 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgomp1 amd64 14.2.0-4ubuntu2~24.04.1 [148 kB]
+[33m36% [17 libgomp1 52.9 kB/148 kB 36%][0m[33m                                    37% [Waiting for headers][0m                         Get:18 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libitm1 amd64 14.2.0-4ubuntu2~24.04.1 [29.7 kB]
+[33m37% [18 libitm1 8,192 B/29.7 kB 28%][0m[33m                                    38% [Waiting for headers][0m                         Get:19 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libatomic1 amd64 14.2.0-4ubuntu2~24.04.1 [10.5 kB]
+[33m38% [19 libatomic1 10.5 kB/10.5 kB 100%][0m[33m                                        38% [Working][0m             Get:20 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libasan8 amd64 14.2.0-4ubuntu2~24.04.1 [3,027 kB]
+[33m38% [20 libasan8 26.2 kB/3,027 kB 1%][0m[33m                                     44% [Waiting for headers][0m                         Get:21 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 liblsan0 amd64 14.2.0-4ubuntu2~24.04.1 [1,322 kB]
+[33m44% [21 liblsan0 48.0 kB/1,322 kB 4%][0m[33m                                     46% [Waiting for headers][0m                         Get:22 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libtsan2 amd64 14.2.0-4ubuntu2~24.04.1 [2,772 kB]
+[33m46% [22 libtsan2 29.0 kB/2,772 kB 1%][0m[33m                                     51% [Waiting for headers][0m                         Get:23 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libubsan1 amd64 14.2.0-4ubuntu2~24.04.1 [1,184 kB]
+[33m52% [23 libubsan1 25.5 kB/1,184 kB 2%][0m[33m                                      54% [Waiting for headers][0m                         Get:24 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libhwasan0 amd64 14.2.0-4ubuntu2~24.04.1 [1,641 kB]
+[33m54% [24 libhwasan0 7,066 B/1,641 kB 0%][0m[33m                                       57% [Waiting for headers][0m                         Get:25 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libquadmath0 amd64 14.2.0-4ubuntu2~24.04.1 [153 kB]
+[33m57% [25 libquadmath0 9,842 B/153 kB 6%][0m[33m                                       58% [Waiting for headers][0m                         Get:26 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-13-dev amd64 13.3.0-6ubuntu2~24.04.1 [2,681 kB]
+[33m58% [26 libgcc-13-dev 2,416 B/2,681 kB 0%][0m[33m                                          63% [Waiting for headers][0m                         Get:27 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1 [21.1 MB]
+[33m63% [27 gcc-13-x86-64-linux-gnu 3,202 B/21.1 MB 0%][0m[33m97% [27 gcc-13-x86-64-linux-gnu 21.1 MB/21.1 MB 100%][0m[33m                                                     97% [Waiting for headers][0m                         Get:28 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13 amd64 13.3.0-6ubuntu2~24.04.1 [494 kB]
+[33m97% [28 gcc-13 6,070 B/494 kB 1%][0m[33m                                 99% [Working][0m             Get:29 http://ru.archive.ubuntu.com/ubuntu noble/main amd64 gcc-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [1,212 B]
+[33m99% [29 gcc-x86-64-linux-gnu 1,212 B/1,212 B 100%][0m                                                  Get:30 http://ru.archive.ubuntu.com/ubuntu noble/main amd64 gcc amd64 4:13.2.0-7ubuntu1 [5,018 B]
+[33m                                                  99% [30 gcc 5,018 B/5,018 B 100%][0m[33m                                 100% [Working][0m              Fetched 50.5 MB in 2s (23.6 MB/s)
+
+7[0;49r8[1ASelecting previously unselected package binutils-common:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 125662 files and directories currently installed.)
+Preparing to unpack .../00-binutils-common_2.42-4ubuntu2.10_amd64.deb ...
+7[50;0f[42m[30mProgress: [  0%][49m[39m [..............................................................................................] 8Unpacking binutils-common:amd64 (2.42-4ubuntu2.10) ...
+7[50;0f[42m[30mProgress: [  2%][49m[39m [#.............................................................................................] 8Selecting previously unselected package libsframe1:amd64.
+Preparing to unpack .../01-libsframe1_2.42-4ubuntu2.10_amd64.deb ...
+7[50;0f[42m[30mProgress: [  2%][49m[39m [##............................................................................................] 8Unpacking libsframe1:amd64 (2.42-4ubuntu2.10) ...
+7[50;0f[42m[30mProgress: [  3%][49m[39m [###...........................................................................................] 8Selecting previously unselected package libbinutils:amd64.
+Preparing to unpack .../02-libbinutils_2.42-4ubuntu2.10_amd64.deb ...
+7[50;0f[42m[30mProgress: [  4%][49m[39m [###...........................................................................................] 8Unpacking libbinutils:amd64 (2.42-4ubuntu2.10) ...
+Selecting previously unselected package libctf-nobfd0:amd64.
+Preparing to unpack .../03-libctf-nobfd0_2.42-4ubuntu2.10_amd64.deb ...
+7[50;0f[42m[30mProgress: [  6%][49m[39m [#####.........................................................................................] 8Unpacking libctf-nobfd0:amd64 (2.42-4ubuntu2.10) ...
+7[50;0f[42m[30mProgress: [  7%][49m[39m [######........................................................................................] 8Selecting previously unselected package libctf0:amd64.
+Preparing to unpack .../04-libctf0_2.42-4ubuntu2.10_amd64.deb ...
+7[50;0f[42m[30mProgress: [  7%][49m[39m [######........................................................................................] 8Unpacking libctf0:amd64 (2.42-4ubuntu2.10) ...
+7[50;0f[42m[30mProgress: [  8%][49m[39m [#######.......................................................................................] 8Selecting previously unselected package libgprofng0:amd64.
+Preparing to unpack .../05-libgprofng0_2.42-4ubuntu2.10_amd64.deb ...
+7[50;0f[42m[30mProgress: [  9%][49m[39m [########......................................................................................] 8Unpacking libgprofng0:amd64 (2.42-4ubuntu2.10) ...
+Selecting previously unselected package binutils-x86-64-linux-gnu.
+Preparing to unpack .../06-binutils-x86-64-linux-gnu_2.42-4ubuntu2.10_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 11%][49m[39m [##########....................................................................................] 8Unpacking binutils-x86-64-linux-gnu (2.42-4ubuntu2.10) ...
+7[50;0f[42m[30mProgress: [ 12%][49m[39m [##########....................................................................................] 8Selecting previously unselected package binutils.
+Preparing to unpack .../07-binutils_2.42-4ubuntu2.10_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 12%][49m[39m [###########...................................................................................] 8Unpacking binutils (2.42-4ubuntu2.10) ...
+7[50;0f[42m[30mProgress: [ 13%][49m[39m [############..................................................................................] 8Selecting previously unselected package gcc-13-base:amd64.
+Preparing to unpack .../08-gcc-13-base_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 14%][49m[39m [#############.................................................................................] 8Unpacking gcc-13-base:amd64 (13.3.0-6ubuntu2~24.04.1) ...
+Selecting previously unselected package libisl23:amd64.
+Preparing to unpack .../09-libisl23_0.26-3build1.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 16%][49m[39m [##############................................................................................] 8Unpacking libisl23:amd64 (0.26-3build1.1) ...
+7[50;0f[42m[30mProgress: [ 17%][49m[39m [###############...............................................................................] 8Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../10-libmpc3_1.3.1-1build1.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 17%][49m[39m [################..............................................................................] 8Unpacking libmpc3:amd64 (1.3.1-1build1.1) ...
+7[50;0f[42m[30mProgress: [ 18%][49m[39m [#################.............................................................................] 8Selecting previously unselected package cpp-13-x86-64-linux-gnu.
+Preparing to unpack .../11-cpp-13-x86-64-linux-gnu_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 19%][49m[39m [#################.............................................................................] 8Unpacking cpp-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+Selecting previously unselected package cpp-13.
+Preparing to unpack .../12-cpp-13_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 21%][49m[39m [###################...........................................................................] 8Unpacking cpp-13 (13.3.0-6ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 21%][49m[39m [####################..........................................................................] 8Selecting previously unselected package cpp-x86-64-linux-gnu.
+Preparing to unpack .../13-cpp-x86-64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 22%][49m[39m [####################..........................................................................] 8Unpacking cpp-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+7[50;0f[42m[30mProgress: [ 23%][49m[39m [#####################.........................................................................] 8Selecting previously unselected package cpp.
+Preparing to unpack .../14-cpp_4%3a13.2.0-7ubuntu1_amd64.deb ...
+Unpacking cpp (4:13.2.0-7ubuntu1) ...
+7[50;0f[42m[30mProgress: [ 25%][49m[39m [#######################.......................................................................] 8Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../15-libcc1-0_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 26%][49m[39m [########################......................................................................] 8Unpacking libcc1-0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 26%][49m[39m [########################......................................................................] 8Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../16-libgomp1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 27%][49m[39m [#########################.....................................................................] 8Unpacking libgomp1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 28%][49m[39m [##########################....................................................................] 8Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../17-libitm1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+Unpacking libitm1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 30%][49m[39m [###########################...................................................................] 8Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../18-libatomic1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 31%][49m[39m [############################..................................................................] 8Unpacking libatomic1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 31%][49m[39m [#############################.................................................................] 8Selecting previously unselected package libasan8:amd64.
+Preparing to unpack .../19-libasan8_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 32%][49m[39m [##############################................................................................] 8Unpacking libasan8:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 33%][49m[39m [###############################...............................................................] 8Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../20-liblsan0_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+Unpacking liblsan0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 35%][49m[39m [################################..............................................................] 8Selecting previously unselected package libtsan2:amd64.
+Preparing to unpack .../21-libtsan2_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 36%][49m[39m [#################################.............................................................] 8Unpacking libtsan2:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 36%][49m[39m [##################################............................................................] 8Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../22-libubsan1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 37%][49m[39m [##################################............................................................] 8Unpacking libubsan1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 38%][49m[39m [###################################...........................................................] 8Selecting previously unselected package libhwasan0:amd64.
+Preparing to unpack .../23-libhwasan0_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+Unpacking libhwasan0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 40%][49m[39m [#####################################.........................................................] 8Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../24-libquadmath0_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 40%][49m[39m [######################################........................................................] 8Unpacking libquadmath0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 41%][49m[39m [######################################........................................................] 8Selecting previously unselected package libgcc-13-dev:amd64.
+Preparing to unpack .../25-libgcc-13-dev_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 42%][49m[39m [#######################################.......................................................] 8Unpacking libgcc-13-dev:amd64 (13.3.0-6ubuntu2~24.04.1) ...
+Selecting previously unselected package gcc-13-x86-64-linux-gnu.
+Preparing to unpack .../26-gcc-13-x86-64-linux-gnu_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 44%][49m[39m [#########################################.....................................................] 8Unpacking gcc-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 45%][49m[39m [#########################################.....................................................] 8Selecting previously unselected package gcc-13.
+Preparing to unpack .../27-gcc-13_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 45%][49m[39m [##########################################....................................................] 8Unpacking gcc-13 (13.3.0-6ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 46%][49m[39m [###########################################...................................................] 8Selecting previously unselected package gcc-x86-64-linux-gnu.
+Preparing to unpack .../28-gcc-x86-64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 47%][49m[39m [############################################..................................................] 8Unpacking gcc-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../29-gcc_4%3a13.2.0-7ubuntu1_amd64.deb ...
+7[50;0f[42m[30mProgress: [ 49%][49m[39m [#############################################.................................................] 8Unpacking gcc (4:13.2.0-7ubuntu1) ...
+7[50;0f[42m[30mProgress: [ 50%][49m[39m [##############################################................................................] 8Setting up binutils-common:amd64 (2.42-4ubuntu2.10) ...
+7[50;0f[42m[30mProgress: [ 50%][49m[39m [###############################################...............................................] 87[50;0f[42m[30mProgress: [ 51%][49m[39m [################################################..............................................] 8Setting up libctf-nobfd0:amd64 (2.42-4ubuntu2.10) ...
+7[50;0f[42m[30mProgress: [ 52%][49m[39m [################################################..............................................] 8Setting up libgomp1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 54%][49m[39m [##################################################............................................] 87[50;0f[42m[30mProgress: [ 55%][49m[39m [###################################################...........................................] 8Setting up libsframe1:amd64 (2.42-4ubuntu2.10) ...
+7[50;0f[42m[30mProgress: [ 55%][49m[39m [####################################################..........................................] 87[50;0f[42m[30mProgress: [ 56%][49m[39m [####################################################..........................................] 8Setting up gcc-13-base:amd64 (13.3.0-6ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 57%][49m[39m [#####################################################.........................................] 8Setting up libquadmath0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 59%][49m[39m [#######################################################.......................................] 87[50;0f[42m[30mProgress: [ 60%][49m[39m [#######################################################.......................................] 8Setting up libmpc3:amd64 (1.3.1-1build1.1) ...
+7[50;0f[42m[30mProgress: [ 60%][49m[39m [########################################################......................................] 87[50;0f[42m[30mProgress: [ 61%][49m[39m [#########################################################.....................................] 8Setting up libatomic1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 63%][49m[39m [###########################################################...................................] 8Setting up libubsan1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 64%][49m[39m [###########################################################...................................] 87[50;0f[42m[30mProgress: [ 64%][49m[39m [############################################################..................................] 8Setting up libhwasan0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 65%][49m[39m [#############################################################.................................] 87[50;0f[42m[30mProgress: [ 66%][49m[39m [##############################################################................................] 8Setting up libasan8:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 68%][49m[39m [###############################################################...............................] 8Setting up libtsan2:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 69%][49m[39m [################################################################..............................] 87[50;0f[42m[30mProgress: [ 69%][49m[39m [#################################################################.............................] 8Setting up libbinutils:amd64 (2.42-4ubuntu2.10) ...
+7[50;0f[42m[30mProgress: [ 70%][49m[39m [##################################################################............................] 87[50;0f[42m[30mProgress: [ 71%][49m[39m [##################################################################............................] 8Setting up libisl23:amd64 (0.26-3build1.1) ...
+7[50;0f[42m[30mProgress: [ 73%][49m[39m [####################################################################..........................] 8Setting up libcc1-0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 74%][49m[39m [#####################################################################.........................] 87[50;0f[42m[30mProgress: [ 74%][49m[39m [#####################################################################.........................] 8Setting up liblsan0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 75%][49m[39m [######################################################################........................] 87[50;0f[42m[30mProgress: [ 76%][49m[39m [#######################################################################.......................] 8Setting up libitm1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 78%][49m[39m [#########################################################################.....................] 8Setting up libctf0:amd64 (2.42-4ubuntu2.10) ...
+7[50;0f[42m[30mProgress: [ 79%][49m[39m [#########################################################################.....................] 87[50;0f[42m[30mProgress: [ 79%][49m[39m [##########################################################################....................] 8Setting up cpp-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 80%][49m[39m [###########################################################################...................] 8Setting up libgprofng0:amd64 (2.42-4ubuntu2.10) ...
+7[50;0f[42m[30mProgress: [ 82%][49m[39m [############################################################################..................] 87[50;0f[42m[30mProgress: [ 83%][49m[39m [#############################################################################.................] 8Setting up libgcc-13-dev:amd64 (13.3.0-6ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 83%][49m[39m [##############################################################################................] 87[50;0f[42m[30mProgress: [ 84%][49m[39m [###############################################################################...............] 8Setting up binutils-x86-64-linux-gnu (2.42-4ubuntu2.10) ...
+7[50;0f[42m[30mProgress: [ 85%][49m[39m [################################################################################..............] 8Setting up cpp-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+7[50;0f[42m[30mProgress: [ 87%][49m[39m [#################################################################################.............] 87[50;0f[42m[30mProgress: [ 88%][49m[39m [##################################################################################............] 8Setting up cpp-13 (13.3.0-6ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 88%][49m[39m [###################################################################################...........] 87[50;0f[42m[30mProgress: [ 89%][49m[39m [###################################################################################...........] 8Setting up gcc-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 90%][49m[39m [####################################################################################..........] 8Setting up binutils (2.42-4ubuntu2.10) ...
+7[50;0f[42m[30mProgress: [ 92%][49m[39m [######################################################################################........] 87[50;0f[42m[30mProgress: [ 93%][49m[39m [#######################################################################################.......] 8Setting up gcc-13 (13.3.0-6ubuntu2~24.04.1) ...
+7[50;0f[42m[30mProgress: [ 93%][49m[39m [#######################################################################################.......] 87[50;0f[42m[30mProgress: [ 94%][49m[39m [########################################################################################......] 8Setting up cpp (4:13.2.0-7ubuntu1) ...
+7[50;0f[42m[30mProgress: [ 95%][49m[39m [#########################################################################################.....] 8Setting up gcc-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+7[50;0f[42m[30mProgress: [ 97%][49m[39m [##########################################################################################....] 87[50;0f[42m[30mProgress: [ 98%][49m[39m [###########################################################################################...] 8Setting up gcc (4:13.2.0-7ubuntu1) ...
+7[50;0f[42m[30mProgress: [ 98%][49m[39m [############################################################################################..] 87[50;0f[42m[30mProgress: [ 99%][49m[39m [#############################################################################################.] 8Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+
+7[0;50r8[1A[JScanning processes... [                                                                                            ]Scanning processes... [                                                                                            ]Scanning processes... [=                                                                                           ]Scanning processes... [==                                                                                          ]Scanning processes... [===                                                                                         ]Scanning processes... [====                                                                                        ]Scanning processes... [====                                                                                        ]Scanning processes... [=====                                                                                       ]Scanning processes... [======                                                                                      ]Scanning processes... [=======                                                                                     ]Scanning processes... [========                                                                                    ]Scanning processes... [=========                                                                                   ]Scanning processes... [=========                                                                                   ]Scanning processes... [==========                                                                                  ]Scanning processes... [===========                                                                                 ]Scanning processes... [============                                                                                ]Scanning processes... [=============                                                                               ]Scanning processes... [=============                                                                               ]Scanning processes... [==============                                                                              ]Scanning processes... [===============                                                                             ]Scanning processes... [================                                                                            ]Scanning processes... [=================                                                                           ]Scanning processes... [==================                                                                          ]Scanning processes... [==================                                                                          ]Scanning processes... [===================                                                                         ]Scanning processes... [====================                                                                        ]Scanning processes... [=====================                                                                       ]Scanning processes... [======================                                                                      ]Scanning processes... [=======================                                                                     ]Scanning processes... [=======================                                                                     ]Scanning processes... [========================                                                                    ]Scanning processes... [=========================                                                                   ]Scanning processes... [==========================                                                                  ]Scanning processes... [===========================                                                                 ]Scanning processes... [===========================                                                                 ]Scanning processes... [============================                                                                ]Scanning processes... [=============================                                                               ]Scanning processes... [==============================                                                              ]Scanning processes... [===============================                                                             ]Scanning processes... [================================                                                            ]Scanning processes... [================================                                                            ]Scanning processes... [=================================                                                           ]Scanning processes... [==================================                                                          ]Scanning processes... [===================================                                                         ]Scanning processes... [====================================                                                        ]Scanning processes... [====================================                                                        ]Scanning processes... [=====================================                                                       ]Scanning processes... [======================================                                                      ]Scanning processes... [=======================================                                                     ]Scanning processes... [========================================                                                    ]Scanning processes... [=========================================                                                   ]Scanning processes... [=========================================                                                   ]Scanning processes... [==========================================                                                  ]Scanning processes... [===========================================                                                 ]Scanning processes... [============================================                                                ]Scanning processes... [=============================================                                               ]Scanning processes... [==============================================                                              ]Scanning processes... [==============================================                                              ]Scanning processes... [===============================================                                             ]Scanning processes... [================================================                                            ]Scanning processes... [=================================================                                           ]Scanning processes... [==================================================                                          ]Scanning processes... [==================================================                                          ]Scanning processes... [===================================================                                         ]Scanning processes... [====================================================                                        ]Scanning processes... [=====================================================                                       ]Scanning processes... [======================================================                                      ]Scanning processes... [=======================================================                                     ]Scanning processes... [=======================================================                                     ]Scanning processes... [========================================================                                    ]Scanning processes... [=========================================================                                   ]Scanning processes... [==========================================================                                  ]Scanning processes... [===========================================================                                 ]Scanning processes... [===========================================================                                 ]Scanning processes... [============================================================                                ]Scanning processes... [=============================================================                               ]Scanning processes... [==============================================================                              ]Scanning processes... [===============================================================                             ]Scanning processes... [================================================================                            ]Scanning processes... [================================================================                            ]Scanning processes... [=================================================================                           ]Scanning processes... [==================================================================                          ]Scanning processes... [===================================================================                         ]Scanning processes... [====================================================================                        ]Scanning processes... [=====================================================================                       ]Scanning processes... [=====================================================================                       ]Scanning processes... [======================================================================                      ]Scanning processes... [=======================================================================                     ]Scanning processes... [========================================================================                    ]Scanning processes... [=========================================================================                   ]Scanning processes... [=========================================================================                   ]Scanning processes... [==========================================================================                  ]Scanning processes... [===========================================================================                 ]Scanning processes... [============================================================================                ]Scanning processes... [=============================================================================               ]Scanning processes... [==============================================================================              ]Scanning processes... [==============================================================================              ]Scanning processes... [===============================================================================             ]Scanning processes... [================================================================================            ]Scanning processes... [=================================================================================           ]Scanning processes... [==================================================================================          ]Scanning processes... [==================================================================================          ]Scanning processes... [===================================================================================         ]Scanning processes... [====================================================================================        ]Scanning processes... [=====================================================================================       ]Scanning processes... [======================================================================================      ]Scanning processes... [=======================================================================================     ]Scanning processes... [=======================================================================================     ]Scanning processes... [========================================================================================    ]Scanning processes... [=========================================================================================   ]Scanning processes... [==========================================================================================  ]Scanning processes... [=========================================================================================== ]Scanning processes... [============================================================================================]Scanning processes...                                                                                               
+Scanning linux images... [                                                                                         ]Scanning linux images... [======================                                                                   ]Scanning linux images... [============================================                                             ]Scanning linux images... [==================================================================                       ]Scanning linux images... [=========================================================================================]Scanning linux images...                                                                                            
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# cat > /usr/locs[Kal/bin/dmesg_suid.c <<'EO[K0[KЩ[KOF'
+[?2004l[?2004h> #INCL[K[K[K[Kinclude <unistd.h>
+[?2004l[?2004h> int main(){
+[?2004l[?2004h> setuid(0);
+[?2004l[?2004h> setgib[Kd(0);
+[?2004l[?2004h> exc[Kecl("/bin/dmesg", "dmesg", (char*)NULL);
+[?2004l[?2004h> retur 1;
+[?2004l[?2004h> }
+[?2004l[?2004h> EOF
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# gcc /usr/local/bin/dmesg_suid [K.c -o /user[K[Kr/local/bin/dmesg_suid
+[?2004l[01m[K/usr/local/bin/dmesg_suid.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[K/usr/local/bin/dmesg_suid.c:6:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kretur[m[K’ undeclared (first use in this function)
+    6 | [01;31m[Kretur[m[K 1;
+      | [01;31m[K^~~~~[m[K
+[01m[K/usr/local/bin/dmesg_suid.c:6:1:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+[01m[K/usr/local/bin/dmesg_suid.c:6:6:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before numeric constant
+    6 | retur[01;31m[K [m[K[32m[K1[m[K;
+      |      [01;31m[K^[m[K[32m[K~[m[K
+      |      [32m[K;[m[K
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# nano /usr/local/bin/dmesg_suid.c
+[?2004l[?2004h[?1049h[22;0;0t[1;50r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[48;52H(B[0;7m[ Reading... ](B[m[48;51H(B[0;7m[ Read 7 lines ](B[m[H(B[0;7m  GNU nano 7.2                                 /usr/local/bin/dmesg_suid.c                                          [1;115H(B[m[49d(B[0;7m^G(B[m Help[49;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[49;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[50d(B[0;7m^X(B[m Exit[50;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[50;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[2d(B[0;1m[36m#include[33m <unistd.h>[3d(B[0m[32mint[39m(B[m main(){[4dsetuid(0);[5dsetgid(0);[6dexecl((B[0;1m[33m"/bin/dmesg"[39m(B[m, (B[0;1m[33m"dmesg"[39m(B[m, ([32mchar[39m(B[m*)(B[0;1m[31mNULL[39m(B[m);[7dretur 1;[8d}[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25hr[?25l[?12l[?25he[?25l[?12l[?25ht[?25l[?12l[?25hu[?25l[?12l[?25hr[?25l[1;76H(B[0;7m*[115G(B[m[?12l[?25h[7d[35mreturn[39m(B[m 1;[?25l[49;17H             (B[0;7mM-D(B[m DOS Format[15X[49;59H(B[0;7mM-A(B[m Append      [81G       (B[0;7mM-B(B[m Backup File[K[50;2H(B[0;7mC(B[m Cancel[17G             (B[0;7mM-M(B[m Mac Format[15X[50;59H(B[0;7mM-P(B[m Prepend     [81G       (B[0;7m^T(B[m Browse[K[48d(B[0;7mFile Name to Write: /usr/local/bin/dmesg_suid.c                                                                     [48;48H(B[m[?12l[?25h[?25l   [1K (B[0;7m[ Writing... ](B[m[K[1;76H(B[0;7m [115G(B[m[48;50H(B[0;7m[ Wrote 7 lines ](B[m[49;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut          (B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[50;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste        (B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[?12l[?25h[7;7H[?25l[48d[J[50d[?12l[?25h[50;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# gx[Kcc /usr/local/bin/dmesg_suid.c -o /usr/local/bin/dmesg_suid
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# chowm[Kn root:root /usr/local/bu[Kin/dmesg_suid
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# chmod 4755 /usr/local/bin/dmesg_suid
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls -l .[K/usr/local/bin/dmesg_suid
+[?2004l-rwsr-xr-x 1 root root 16056 Oct 19 03:44 [0m[37;41m/usr/local/bin/dmesg_suid[0m
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# su - user2 -c '/usr/local/bin/dmesg_suid | head'
+[?2004l[    0.000000] Linux version 6.8.0-147-generic (buildd@lcy02-amd64-081) (x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #147-Ubuntu SMP PREEMPT_DYNAMIC Thu Sep 24 11:33:16 UTC 2026 (Ubuntu 6.8.0-147.147-generic 6.8.12)
+[    0.000000] Command line: BOOT_IMAGE=/vmlinuz-6.8.0-147-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Hygon HygonGenuine
+[    0.000000]   Centaur CentaurHauls
+[    0.000000]   zhaoxin   Shanghai  
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# chage -M 10 user1
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# chage -M 10 user2
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# chage M [K[K-M 10 user3
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# chage -'[Kl user1 | head -n 6
+[?2004lLast password change					: Oct 19, 2026
+Password expires					: Oct 29, 2026
+Password inactive					: never
+Account expires						: never
+Minimum number of days between password change		: 0
+Maximum number of days between password change		: 10
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# chage -l user2 }[K| head -n 6
+[?2004lLast password change					: Oct 19, 2026
+Password expires					: Oct 29, 2026
+Password inactive					: never
+Account expires						: never
+Minimum number of days between password change		: 0
+Maximum number of days between password change		: 10
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# chage -l user3 | head -n 6
+[?2004lLast password change					: Oct 19, 2026
+Password expires					: Oct 29, 2026
+Password inactive					: never
+Account expires						: never
+Minimum number of days between password change		: 0
+Maximum number of days between password change		: 10
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# echo "Ф[KАлина Колодина" > /etc?[K/motd
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# cat /etc/motd
+[?2004lАлина Колодина
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# apt update
+[?2004l[33m0% [Working][0m            Hit:1 http://ru.archive.ubuntu.com/ubuntu noble InRelease
+[33m0% [Connecting to security.ubuntu.com (185.125.190.82)][0m[33m0% [Waiting for headers] [Connecting to security.ubuntu.com (185.125.190.82)][0m                                                                             Hit:2 http://ru.archive.ubuntu.com/ubuntu noble-updates InRelease
+[33m                                                                             0% [Connecting to security.ubuntu.com (185.125.190.82)][0m[33m                                                       0% [Waiting for headers] [Waiting for headers][0m                                              Hit:3 http://ru.archive.ubuntu.com/ubuntu noble-backports InRelease
+[33m                                              0% [Waiting for headers][0m[33m0% [Waiting for headers][0m                        Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+[33m                        0% [Working][0m[33m20% [Working][0m             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 41%Reading package lists... 41%Reading package lists... 57%Reading package lists... 57%Reading package lists... 57%Reading package lists... 57%Reading package lists... 58%Reading package lists... 58%Reading package lists... 61%Reading package lists... 61%Reading package lists... 64%Reading package lists... 64%Reading package lists... 69%Reading package lists... 69%Reading package lists... 73%Reading package lists... 73%Reading package lists... 78%Reading package lists... 78%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 83%Reading package lists... 83%Reading package lists... 85%Reading package lists... 85%Reading package lists... 90%Reading package lists... 90%Reading package lists... 94%Reading package lists... 94%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+88 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# apt install -y rsync
+[?2004lReading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+rsync is already the newest version (3.2.7-1ubuntu1.5).
+rsync set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 88 not upgraded.
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# mkdir -p /root/etc_backup
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# rsync -a /etc/[K/ .root/etc_backup
+[?2004lrsync: [Receiver] mkdir "/root/.root/etc_backup" failed: No such file or directory (2)
+rsync error: error in file IO (code 11) at main.c(800) [Receiver=3.2.7]
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls -l /root/etc_backup/motd
+[?2004lls: cannot access '/root/etc_backup/motd': No such file or directory
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# rc[Ksync -a /etc/ /root/etc_backup/
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls -l .[K/root/etc_backup/motd
+[?2004l-rw-r--r-- 1 root root 28 Oct 19 03:50 /root/etc_backup/motd
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# [K]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# cd /root
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# tar -czf r[Ketc_backup.tar.gz etc_backup
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# tar -cjf etc_backup [K/[K.tar.bzw[K2 etc_backup
+[?2004l/bin/sh: 1: bzip2: not found
+tar: etc_backup.tar.bz2: Cannot write: Broken pipe
+tar: Child returned status 127
+tar: Error is not recoverable: exiting now
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# apt install -y p7zip-full
+[?2004lReading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  7zip
+Suggested packages:
+  7zip-standalone 7zip-rar
+The following NEW packages will be installed:
+  7zip p7zip-full
+0 upgraded, 2 newly installed, 0 to remove and 88 not upgraded.
+Need to get 1,849 kB of archives.
+After this operation, 6,318 kB of additional disk space will be used.
+[33m0% [Working][0m            Get:1 http://ru.archive.ubuntu.com/ubuntu noble/universe amd64 7zip amd64 23.01+dfsg-11 [1,846 kB]
+[33m1% [1 7zip 11.8 kB/1,846 kB 1%][0m[33m                               90% [Working][0m             Get:2 http://ru.archive.ubuntu.com/ubuntu noble/universe amd64 p7zip-full all 16.02+transitional.1 [2,500 B]
+[33m90% [2 p7zip-full 2,500 B/2,500 B 100%][0m[33m                                       100% [Working][0m              Fetched 1,849 kB in 1s (3,230 kB/s)
+
+7[0;49r8[1ASelecting previously unselected package 7zip.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 126284 files and directories currently installed.)
+Preparing to unpack .../7zip_23.01+dfsg-11_amd64.deb ...
+7[50;0f[42m[30mProgress: [  0%][49m[39m [...................................................................................] 87[50;0f[42m[30mProgress: [ 11%][49m[39m [#########..........................................................................] 8Unpacking 7zip (23.01+dfsg-11) ...
+7[50;0f[42m[30mProgress: [ 22%][49m[39m [##################.................................................................] 8Selecting previously unselected package p7zip-full.
+Preparing to unpack .../p7zip-full_16.02+transitional.1_all.deb ...
+7[50;0f[42m[30mProgress: [ 33%][49m[39m [###########################........................................................] 8Unpacking p7zip-full (16.02+transitional.1) ...
+7[50;0f[42m[30mProgress: [ 44%][49m[39m [####################################...............................................] 8Setting up 7zip (23.01+dfsg-11) ...
+7[50;0f[42m[30mProgress: [ 56%][49m[39m [##############################################.....................................] 87[50;0f[42m[30mProgress: [ 67%][49m[39m [#######################################################............................] 8Setting up p7zip-full (16.02+transitional.1) ...
+7[50;0f[42m[30mProgress: [ 78%][49m[39m [################################################################...................] 87[50;0f[42m[30mProgress: [ 89%][49m[39m [#########################################################################..........] 8Processing triggers for man-db (2.12.0-4build2) ...
+
+7[0;50r8[1A[JScanning processes... [                                                                                 ]Scanning processes... [                                                                                 ]Scanning processes... [=                                                                                ]Scanning processes... [==                                                                               ]Scanning processes... [==                                                                               ]Scanning processes... [===                                                                              ]Scanning processes... [====                                                                             ]Scanning processes... [=====                                                                            ]Scanning processes... [=====                                                                            ]Scanning processes... [======                                                                           ]Scanning processes... [=======                                                                          ]Scanning processes... [=======                                                                          ]Scanning processes... [========                                                                         ]Scanning processes... [=========                                                                        ]Scanning processes... [==========                                                                       ]Scanning processes... [==========                                                                       ]Scanning processes... [===========                                                                      ]Scanning processes... [============                                                                     ]Scanning processes... [=============                                                                    ]Scanning processes... [=============                                                                    ]Scanning processes... [==============                                                                   ]Scanning processes... [===============                                                                  ]Scanning processes... [===============                                                                  ]Scanning processes... [================                                                                 ]Scanning processes... [=================                                                                ]Scanning processes... [==================                                                               ]Scanning processes... [==================                                                               ]Scanning processes... [===================                                                              ]Scanning processes... [====================                                                             ]Scanning processes... [====================                                                             ]Scanning processes... [=====================                                                            ]Scanning processes... [======================                                                           ]Scanning processes... [=======================                                                          ]Scanning processes... [=======================                                                          ]Scanning processes... [========================                                                         ]Scanning processes... [=========================                                                        ]Scanning processes... [==========================                                                       ]Scanning processes... [==========================                                                       ]Scanning processes... [===========================                                                      ]Scanning processes... [============================                                                     ]Scanning processes... [============================                                                     ]Scanning processes... [=============================                                                    ]Scanning processes... [==============================                                                   ]Scanning processes... [===============================                                                  ]Scanning processes... [===============================                                                  ]Scanning processes... [================================                                                 ]Scanning processes... [=================================                                                ]Scanning processes... [=================================                                                ]Scanning processes... [==================================                                               ]Scanning processes... [===================================                                              ]Scanning processes... [====================================                                             ]Scanning processes... [====================================                                             ]Scanning processes... [=====================================                                            ]Scanning processes... [======================================                                           ]Scanning processes... [=======================================                                          ]Scanning processes... [=======================================                                          ]Scanning processes... [========================================                                         ]Scanning processes... [=========================================                                        ]Scanning processes... [=========================================                                        ]Scanning processes... [==========================================                                       ]Scanning processes... [===========================================                                      ]Scanning processes... [============================================                                     ]Scanning processes... [============================================                                     ]Scanning processes... [=============================================                                    ]Scanning processes... [==============================================                                   ]Scanning processes... [===============================================                                  ]Scanning processes... [===============================================                                  ]Scanning processes... [================================================                                 ]Scanning processes... [=================================================                                ]Scanning processes... [=================================================                                ]Scanning processes... [==================================================                               ]Scanning processes... [===================================================                              ]Scanning processes... [====================================================                             ]Scanning processes... [====================================================                             ]Scanning processes... [=====================================================                            ]Scanning processes... [======================================================                           ]Scanning processes... [======================================================                           ]Scanning processes... [=======================================================                          ]Scanning processes... [========================================================                         ]Scanning processes... [=========================================================                        ]Scanning processes... [=========================================================                        ]Scanning processes... [==========================================================                       ]Scanning processes... [===========================================================                      ]Scanning processes... [============================================================                     ]Scanning processes... [============================================================                     ]Scanning processes... [=============================================================                    ]Scanning processes... [==============================================================                   ]Scanning processes... [==============================================================                   ]Scanning processes... [===============================================================                  ]Scanning processes... [================================================================                 ]Scanning processes... [=================================================================                ]Scanning processes... [=================================================================                ]Scanning processes... [==================================================================               ]Scanning processes... [===================================================================              ]Scanning processes... [===================================================================              ]Scanning processes... [====================================================================             ]Scanning processes... [=====================================================================            ]Scanning processes... [======================================================================           ]Scanning processes... [======================================================================           ]Scanning processes... [=======================================================================          ]Scanning processes... [========================================================================         ]Scanning processes... [=========================================================================        ]Scanning processes... [=========================================================================        ]Scanning processes... [==========================================================================       ]Scanning processes... [===========================================================================      ]Scanning processes... [===========================================================================      ]Scanning processes... [============================================================================     ]Scanning processes... [=============================================================================    ]Scanning processes... [==============================================================================   ]Scanning processes... [==============================================================================   ]Scanning processes... [===============================================================================  ]Scanning processes... [================================================================================ ]Scanning processes... [=================================================================================]Scanning processes...                                                                                    
+Scanning linux images... [                                                                              ]Scanning linux images... [===================                                                           ]Scanning linux images... [=======================================                                       ]Scanning linux images... [==========================================================                    ]Scanning linux images... [==============================================================================]Scanning linux images...                                                                                 
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# 7z a etc_backup.7z /root/etc_backup >/[K/dev/null
+[?2004l
+WARNING: errno=2 : No such file or directory
+/root/etc_backup/os-release
+
+
+WARNING: errno=2 : No such file or directory
+/root/etc_backup/resolv.conf
+
+
+WARNING: errno=2 : No such file or directory
+/root/etc_backup/mtab
+
+
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# 
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls -lh /root/etc_backup.tar.gz /root/etc_backup.tar/[K.bz2 /root/etc-[K_backup. 7z[K[A[K]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls -lh /root/etc_backup.tar.gz /root/etc_backup.tar.bz2 /root/etc_backup.7z [K[A[K]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls -lh /root/etc_backup.tar.gz /root/etc_backup.tar.bz2 /root/etc_backup.7z
+[?2004l-rw-r--r-- 1 root root 5.2M Oct 19 03:59 [0m[01;31m/root/etc_backup.7z[0m
+-rw-r--r-- 1 root root    0 Oct 19 03:57 [01;31m/root/etc_backup.tar.bz2[0m
+-rw-r--r-- 1 root root 565K Oct 19 03:57 [01;31m/root/etc_backup.tar.gz[0m
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# [K]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# cd/root
+[?2004l-bash: cd/root: No such file or directory
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# rm -f t[Ketc_backup.tar.gz etc_backup.tar.bx[Kz2 t[Ketc_backup.tar etc_backuo[Kp.tar. 7z
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# tar -cf etc_backup.tar -C /root etc_backup
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# gzip -kf etc_backup.tar 
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# bzip2 -kf etc_backup.tar
+[?2004lCommand 'bzip2' not found, but can be installed with:
+apt install bzip2
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# apt update
+[?2004l[33m0% [Working][0m            Hit:1 http://ru.archive.ubuntu.com/ubuntu noble InRelease
+[33m0% [Connecting to security.ubuntu.com (91.189.92.24)][0m[33m0% [Waiting for headers] [Connecting to security.ubuntu.com (91.189.92.24)][0m                                                                           Hit:2 http://ru.archive.ubuntu.com/ubuntu noble-updates InRelease
+[33m                                                                           0% [Waiting for headers][0m[33m0% [Waiting for headers] [Waiting for headers][0m                                              Hit:3 http://ru.archive.ubuntu.com/ubuntu noble-backports InRelease
+[33m                                              0% [Waiting for headers][0m[33m0% [Waiting for headers][0m                        Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+[33m                        0% [Working][0m[33m20% [Working][0m             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 5%Reading package lists... 41%Reading package lists... 41%Reading package lists... 57%Reading package lists... 57%Reading package lists... 57%Reading package lists... 57%Reading package lists... 58%Reading package lists... 58%Reading package lists... 61%Reading package lists... 61%Reading package lists... 64%Reading package lists... 64%Reading package lists... 69%Reading package lists... 69%Reading package lists... 73%Reading package lists... 73%Reading package lists... 78%Reading package lists... 78%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 83%Reading package lists... 83%Reading package lists... 85%Reading package lists... 85%Reading package lists... 90%Reading package lists... 90%Reading package lists... 94%Reading package lists... 94%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+88 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# apt inc[Kstall -y bzip2
+[?2004lReading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+Suggested packages:
+  bzip2-doc
+The following NEW packages will be installed:
+  bzip2
+0 upgraded, 1 newly installed, 0 to remove and 88 not upgraded.
+Need to get 34.6 kB of archives.
+After this operation, 112 kB of additional disk space will be used.
+[33m0% [Working][0m            Get:1 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 bzip2 amd64 1.0.8-5.1ubuntu0.1 [34.6 kB]
+[33m27% [1 bzip2 11.8 kB/34.6 kB 34%][0m[33m                                 100% [Working][0m              Fetched 34.6 kB in 0s (199 kB/s)
+
+7[0;49r8[1ASelecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 126310 files and directories currently installed.)
+Preparing to unpack .../bzip2_1.0.8-5.1ubuntu0.1_amd64.deb ...
+7[50;0f[42m[30mProgress: [  0%][49m[39m [...................................................................................] 87[50;0f[42m[30mProgress: [ 20%][49m[39m [################...................................................................] 8Unpacking bzip2 (1.0.8-5.1ubuntu0.1) ...
+7[50;0f[42m[30mProgress: [ 40%][49m[39m [#################################..................................................] 8Setting up bzip2 (1.0.8-5.1ubuntu0.1) ...
+7[50;0f[42m[30mProgress: [ 60%][49m[39m [#################################################..................................] 87[50;0f[42m[30mProgress: [ 80%][49m[39m [##################################################################.................] 8Processing triggers for man-db (2.12.0-4build2) ...
+
+7[0;50r8[1A[JScanning processes... [                                                                                 ]Scanning processes... [                                                                                 ]Scanning processes... [=                                                                                ]Scanning processes... [==                                                                               ]Scanning processes... [==                                                                               ]Scanning processes... [===                                                                              ]Scanning processes... [====                                                                             ]Scanning processes... [=====                                                                            ]Scanning processes... [=====                                                                            ]Scanning processes... [======                                                                           ]Scanning processes... [=======                                                                          ]Scanning processes... [=======                                                                          ]Scanning processes... [========                                                                         ]Scanning processes... [=========                                                                        ]Scanning processes... [==========                                                                       ]Scanning processes... [==========                                                                       ]Scanning processes... [===========                                                                      ]Scanning processes... [============                                                                     ]Scanning processes... [============                                                                     ]Scanning processes... [=============                                                                    ]Scanning processes... [==============                                                                   ]Scanning processes... [===============                                                                  ]Scanning processes... [===============                                                                  ]Scanning processes... [================                                                                 ]Scanning processes... [=================                                                                ]Scanning processes... [=================                                                                ]Scanning processes... [==================                                                               ]Scanning processes... [===================                                                              ]Scanning processes... [====================                                                             ]Scanning processes... [====================                                                             ]Scanning processes... [=====================                                                            ]Scanning processes... [======================                                                           ]Scanning processes... [======================                                                           ]Scanning processes... [=======================                                                          ]Scanning processes... [========================                                                         ]Scanning processes... [=========================                                                        ]Scanning processes... [=========================                                                        ]Scanning processes... [==========================                                                       ]Scanning processes... [===========================                                                      ]Scanning processes... [===========================                                                      ]Scanning processes... [============================                                                     ]Scanning processes... [=============================                                                    ]Scanning processes... [==============================                                                   ]Scanning processes... [==============================                                                   ]Scanning processes... [===============================                                                  ]Scanning processes... [================================                                                 ]Scanning processes... [================================                                                 ]Scanning processes... [=================================                                                ]Scanning processes... [==================================                                               ]Scanning processes... [===================================                                              ]Scanning processes... [===================================                                              ]Scanning processes... [====================================                                             ]Scanning processes... [=====================================                                            ]Scanning processes... [=====================================                                            ]Scanning processes... [======================================                                           ]Scanning processes... [=======================================                                          ]Scanning processes... [========================================                                         ]Scanning processes... [========================================                                         ]Scanning processes... [=========================================                                        ]Scanning processes... [==========================================                                       ]Scanning processes... [===========================================                                      ]Scanning processes... [===========================================                                      ]Scanning processes... [============================================                                     ]Scanning processes... [=============================================                                    ]Scanning processes... [=============================================                                    ]Scanning processes... [==============================================                                   ]Scanning processes... [===============================================                                  ]Scanning processes... [================================================                                 ]Scanning processes... [================================================                                 ]Scanning processes... [=================================================                                ]Scanning processes... [==================================================                               ]Scanning processes... [==================================================                               ]Scanning processes... [===================================================                              ]Scanning processes... [====================================================                             ]Scanning processes... [=====================================================                            ]Scanning processes... [=====================================================                            ]Scanning processes... [======================================================                           ]Scanning processes... [=======================================================                          ]Scanning processes... [=======================================================                          ]Scanning processes... [========================================================                         ]Scanning processes... [=========================================================                        ]Scanning processes... [==========================================================                       ]Scanning processes... [==========================================================                       ]Scanning processes... [===========================================================                      ]Scanning processes... [============================================================                     ]Scanning processes... [============================================================                     ]Scanning processes... [=============================================================                    ]Scanning processes... [==============================================================                   ]Scanning processes... [===============================================================                  ]Scanning processes... [===============================================================                  ]Scanning processes... [================================================================                 ]Scanning processes... [=================================================================                ]Scanning processes... [=================================================================                ]Scanning processes... [==================================================================               ]Scanning processes... [===================================================================              ]Scanning processes... [====================================================================             ]Scanning processes... [====================================================================             ]Scanning processes... [=====================================================================            ]Scanning processes... [======================================================================           ]Scanning processes... [======================================================================           ]Scanning processes... [=======================================================================          ]Scanning processes... [========================================================================         ]Scanning processes... [=========================================================================        ]Scanning processes... [=========================================================================        ]Scanning processes... [==========================================================================       ]Scanning processes... [===========================================================================      ]Scanning processes... [===========================================================================      ]Scanning processes... [============================================================================     ]Scanning processes... [=============================================================================    ]Scanning processes... [==============================================================================   ]Scanning processes... [==============================================================================   ]Scanning processes... [===============================================================================  ]Scanning processes... [================================================================================ ]Scanning processes... [=================================================================================]Scanning processes...                                                                                    
+Scanning linux images... [                                                                              ]Scanning linux images... [===================                                                           ]Scanning linux images... [=======================================                                       ]Scanning linux images... [==========================================================                    ]Scanning linux images... [==============================================================================]Scanning linux images...                                                                                 
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# cd /root
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# bzip2 -kf etc_backup.tap[Kr
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# 7z a -mx-[K=9 etc_backup.tar.7z etc_backup.tar ?[K>/[K/dev/null
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls -lh /root/etc_backup.tar /root/etc_backup.tar.gz /rooy[Kt/etc_backup.tar. bz2 /root/etc_backup.tar.7z
+[?2004l-rw-r--r-- 1 root root 3.3M Oct 19 04:04 [0m[01;31m/root/etc_backup.tar[0m
+-rw-r--r-- 1 root root 454K Oct 19 04:07 [01;31m/root/etc_backup.tar.7z[0m
+-rw-r--r-- 1 root root 528K Oct 19 04:04 [01;31m/root/etc_backup.tar.bz2[0m
+-rw-r--r-- 1 root root 565K Oct 19 04:04 [01;31m/root/etc_backup.tar.gz[0m
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# date '+%F %T' > /etc/mi[Kotd
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# cat /etc/motd
+[?2004l2026-10-19 04:10:21
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# rsync -a --delete /etc/ /root/etc_backup?[K/
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# cd /root
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# tar -czf etc_backup.tar [K.gz etc_backup
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# tar -tzf /root/etc_backup.tar.gz | grep -E '(^}}[K[K|\[K|[K/)etc)[K_backup/motd$'
+[?2004l[01;31m[Ketc_backup/motd[m[K
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# cd /root
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# tar -tg[Kjf etc_backup.tar.bx[Kz4[K2 | head
+[?2004letc_backup/
+etc_backup/rc4.d/
+etc_backup/rc4.d/S01uuidd
+etc_backup/rc4.d/S01grub-common
+etc_backup/rc4.d/S01rsync
+etc_backup/rc4.d/S01plymouth
+etc_backup/rc4.d/S01dbus
+etc_backup/rc4.d/S01sysstat
+etc_backup/rc4.d/S01console-setup.sh
+etc_backup/rc4.d/S01open-vm-tools
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# tar -djf etc_backup.tar.bz2 -C /root
+[?2004letc_backup/motd: Mod time differs
+etc_backup/motd: Size differs
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# cd /root
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# tar -cjf etc_backup.tar/[K.bz2 t[Ketc_backup
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# tar -djf etc_backup,[K.tar.bz2 -C /root
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# mkdir -p /root/etc_bc[Kackup.[K_gzip /root/etc_backup_7zip
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# tar -xzf /root/etc_backup.tar.gz -C /root/etc_backup_gzip
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# 7z /[Kx/root/etc_backup.tar.7z -0[Ko/root/etc_backup_7zip ?[K>/dex/null
+[?2004l-bash: /dex/null: No such file or directory
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ^C[?2004l[?2004h[?2004l
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# [7m7z x/root/etc_backup.tar.7z -o/root/etc_backup_7zip >/dex/null[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C7z x/root/etc_backup.tar.7z -o/root/etc_backup_7zip >/dex/null[Cvx/null[1Px/null[1Px/nullex/null[C[1P/nullv/null[C[C[C[C[C
+[?2004l
+
+Command Line Error:
+Unsupported command:
+x/root/etc_backup.tar.7z
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# tar -xf /root/etc_backup_7zip/etc_backup.tar -C /root/etc_backup_7zip
+[?2004ltar: /root/etc_backup_7zip/etc_backup.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls -lh /root/*.7z
+[?2004l-rw-r--r-- 1 root root 5.2M Oct 19 03:59 [0m[01;31m/root/etc_backup.7z[0m
+-rw-r--r-- 1 root root 454K Oct 19 04:07 [01;31m/root/etc_backup.tar.7z[0m
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# rm -f[Krf /root/etc_bac_[Kkup_7zip
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# mkdir -p /root/etc_backup_7zip
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# 7z x /root/etc_backup.tar.7z -o/root/etc_backup_7zip
+[?2004l
+7-Zip 23.01 (x64) : Copyright (c) 1999-2023 Igor Pavlov : 2023-06-20
+ 64-bit locale=en_US.UTF-8 Threads:2 OPEN_MAX:1024
+
+Scanning the drive for archives:
+  0M Scan /root/                1 file, 463911 bytes (454 KiB)
+
+Extracting archive: /root/etc_backup.tar.7z
+--
+Path = /root/etc_backup.tar.7z
+Type = 7z
+Physical Size = 463911
+Headers Size = 138
+Method = LZMA2:22
+Solid = -
+Blocks = 1
+
+  0%    Everything is Ok
+
+Size:       3430400
+Compressed: 463911
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# ls l[K-lh .[K/root/etc_backuo[Kp_7zip
+[?2004ltotal 3.3M
+-rw-r--r-- 1 root root 3.3M Oct 19 04:04 [0m[01;31metc_backup.tar[0m
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# tar -xf /root/r[Keta[Kc_backup_7zip/etc_backup.tar -C /rppt/[K[K[K[Koot/etc_backup_7zip
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# diff -u /root/etc_backup_gzip?[K/etc_backup/motd/[K /root/etc_backup_7zip/etc_b ackup/motd || true
+[?2004l--- /root/etc_backup_gzip/etc_backup/motd	2026-10-19 04:10:21.000000000 +0000
++++ /root/etc_backup_7zip/etc_backup/motd	2026-10-19 03:50:37.000000000 +0000
+@@ -1 +1 @@
+-2026-10-19 04:10:21
++Алина Колодина
+[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# cd /root
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# tar -cf etc_backup.tar -C /root etc_backup
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# 7z a -mx=9 /root/etc_backup.tar.7z /root/etc_backup.tar -y >?[K/dev [K/null
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# rm -rf /root/rtc_[K[K[K[Ketc_backup_7zip
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# mkdir -p /root/etc)[K_backup_7zip
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# 7z x /root/etc)[K_backup.tar.7z -o [K/root/etc_backup_7zip >/dev?[K/null
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# tra[K[Kar -xf /root/etc_backup_7zip/etc_backup.tar -C /root [K/etc_backup_7zip
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# dis[Kff -u /root/etc_backup_gzip?[K/etc_backup/motd /root/etc_backup_7zip/etc_b ackup/motd || true
+[?2004l[?2004h]0;root@eltex-practice2-pg1-v23: ~root@eltex-practice2-pg1-v23:~# exit
+[?2004llogout
+Connection to 172.16.9.197 closed.
+[?2004h]0;eltex-pg1-v23@eltex-2026-autumn: ~eltex-pg1-v23@eltex-2026-autumn:~$ exit
+[?2004lexit
+
+Script done on 2026-10-19 11:33:40+07:00 [COMMAND_EXIT_CODE="0"]

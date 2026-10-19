@@ -1,0 +1,242 @@
+Script started on 2026-10-12 12:49:51+07:00 [COMMAND="bash --noprofile --norc" TERM="screen.xterm-256color" TTY="/dev/pts/15" COLUMNS="93" LINES="50"]
+bash-5.2$ bind 'set enable-bracketed -paste off'
+bash-5.2$ unset LS_COLORS
+bash-5.2$ alias isls='ls --color=never'
+bash-5.2$ alies grep='grep --color=never'
+bash: alies: command not found
+bash-5.2$ alias grep='grep --color=never'
+bash-5.2$ unset PROMPT_COMMAND
+bash-5.2$ PS1='\u@]\h^:]\w\$'
+eltex-pg1-v23@eltex-2026-autumn:~$ls
+ls           lsb_release  lsinitramfs  lslocks      lsmod        lspci        
+lsattr       lscpu        lsipc        lslogins     lsns         lsusb        
+lsblk        lsfd         lsirq        lsmem        lsof         
+eltex-pg1-v23@eltex-2026-autumn:~$lsecho $HIST
+$HISTCMD       $HISTFILE      $HISTFILESIZE  $HISTSIZE      
+eltex-pg1-v23@eltex-2026-autumn:~$echo $HISTecho "$HISTFILESIZE"
+500
+eltex-pg1-v23@eltex-2026-autumn:~$ls -d /[.[!.]* ..?* 2>/dev/null
+ .bash_history	 .bash_logout   .bashrc   .config   .profile   .viminfo
+eltex-pg1-v23@eltex-2026-autumn:~$export HISTTIMEFORMAT='%F %T'
+eltex-pg1-v23@eltex-2026-autumn:~$pwd
+/home/eltex-pg1-v23
+eltex-pg1-v23@eltex-2026-autumn:~$history | tail -n 10
+  157  2026-10-12 12:51:38alias ls='ls --color=never'
+  158  2026-10-12 12:52:07alies grep='grep --color=never'
+  159  2026-10-12 12:53:37alias grep='grep --color=never'
+  160  2026-10-12 12:54:00unset PROMPT_COMMAND
+  161  2026-10-12 12:54:31PS1='\u@\h:\w\$'
+  162  2026-10-12 12:55:41echo "$HISTFILESIZE"
+  163  2026-10-12 12:56:39ls -d .[!.]* ..?* 2>/dev/null
+  164  2026-10-12 12:57:28export HISTTIMEFORMAT='%F %T'
+  165  2026-10-12 12:57:32pwd
+  166  2026-10-12 12:57:49history | tail -n 10
+eltex-pg1-v23@eltex-2026-autumn:~$date
+Mon Oct 12 12:58:00 PM +07 2026
+eltex-pg1-v23@eltex-2026-autumn:~$history | tail -mn 5
+  164  2026-10-12 12:57:28export HISTTIMEFORMAT='%F %T'
+  165  2026-10-12 12:57:32pwd
+  166  2026-10-12 12:57:49history | tail -n 10
+  167  2026-10-12 12:58:00date
+  168  2026-10-12 12:58:24history | tail -n 5
+eltex-pg1-v23@eltex-2026-autumn:~$echo "$HISTFILE"
+/home/eltex-pg1-v23/.bash_history
+eltex-pg1-v23@eltex-2026-autumn:~$tail -n 20 "$HISTFILE'"
+cd ~
+~cd ~
+cd
+LOG="${USER}_part1.log"
+export TERM=dumb
+unset LS_COLORS
+alias ls='ls --color=never'
+alias grep='grep --color=never'
+PS1='\u@\h:\w\$ '
+tmux new -s whoami_part2
+screen -S whoami_part2
+LOG="${USER}_part1.log"
+script -q -f "$LOG"
+LOG="${USER}_part1.log"
+rm -f "$LOG"
+export TERM=xterm-256color
+screen -S whoami_part2
+echo "$STY"
+screen -ls
+exit
+eltex-pg1-v23@eltex-2026-autumn:~$shopt -s histappend 
+eltex-pg1-v23@eltex-2026-autumn:~$PROMPT_COMMAND='history -a'
+eltex-pg1-v23@eltex-2026-autumn:~$echo "$PROMPT _COMMAND"
+history -a
+eltex-pg1-v23@eltex-2026-autumn:~$echo HISTORY_AFTER_AUTOSAVE
+HISTORY_AFTER_AUTOSAVE
+eltex-pg1-v23@eltex-2026-autumn:~$history | tail -n 5
+  171  2026-10-12 12:59:58shopt -s histappend 
+  172  2026-10-12 13:00:30PROMPT_COMMAND='history -a'
+  173  2026-10-12 13:01:05echo "$PROMPT_COMMAND"
+  174  2026-10-12 13:01:35echo HISTORY_AFTER_AUTOSAVE
+  175  2026-10-12 13:01:58history | tail -n 5
+eltex-pg1-v23@eltex-2026-autumn:~$tail -n 50 "$HISTFILE" | grep -n 'HISTORY_AFTER_AUTOSAVWE'
+48:echo HISTORY_AFTER_AUTOSAVE
+eltex-pg1-v23@eltex-2026-autumn:~$echo "STY=$STY"
+STY=86633.whoami_part2
+eltex-pg1-v23@eltex-2026-autumn:~$ps -o pid ,cmd -p $$
+    PID CMD
+  86879 bash --noprofile --norc
+eltex-pg1-v23@eltex-2026-autumn:~$ps -o pid,ppid,cmd -p $$
+    PID    PPID CMD
+  86879   86878 bash --noprofile --norc
+eltex-pg1-v23@eltex-2026-autumn:~$ps -o pid,cmd -p $PPID
+    PID CMD
+  86878 script -q -f eltex-pg1-v23_part1.log -c bash --noprofile --norc
+eltex-pg1-v23@eltex-2026-autumn:~$DATE=$(date +%F)
+eltex-pg1-v23@eltex-2026-autumn:~$echo "$DATE"
+2026-10-12
+eltex-pg1-v23@eltex-2026-autumn:~$TIME=$(date +%T)
+eltex-pg1-v23@eltex-2026-autumn:~$echo "$TIME"
+13:10:39
+eltex-pg1-v23@eltex-2026-autumn:~$DATE_TEMEIME="$DATE $TIME"
+eltex-pg1-v23@eltex-2026-autumn:~$echo "$DATE_TIME"
+2026-10-12 13:10:39
+eltex-pg1-v23@eltex-2026-autumn:~$find -L /bin /sbin -maxdepth 1 -type f -name '*[0-9]*' -eltex-pg1-v23@eltex-2026-autumn:~$find -L /bin /sbin -maxdepth 1 -type f -name '*[0-9]*' -printf '%f/\n' 2>/dev/ null | sorteltex-pg1-v23@eltex-2026-autumn:~$find -L /bin /sbin -maxdepth 1 -type f -name '*[0-9]*' -printf '%f\n' 2>/dev/null | sort -u
+addr2line
+b2sum
+base32
+base64
+bunzip2
+bzip2
+bzip2recover
+c89
+c89-gcc
+c99
+c99-gcc
+cpan5.36-x86_64-linux-gnu
+cpp-12
+diff3
+dumpe2fs
+e2freefrag
+e2fsck
+e2image
+e2label
+e2mmpstatus
+e2scrub
+e2scrub_all
+e2undo
+e4crypt
+e4defrag
+enc2xs
+fsck.ext2
+fsck.ext3
+fsck.ext4
+gcc-12
+gcc-ar-12
+gcc-nm-12
+gcc-ranlib-12
+gcov-12
+gcov-dump-12
+gcov-tool-12
+grub-menulst2cfg
+grub-mkpasswd-pbkdf2
+grub-syslinux2cfg
+h2ph
+h2xs
+i386
+killall5
+linux32
+linux64
+lto-dump-12
+md5sum
+md5sum.textutils
+mke2fs
+mkfs.ext2
+mkfs.ext3
+mkfs.ext4
+pdb3
+pdb3.11
+perl5.36.0
+perl5.36-x86_64-linux-gnu
+ping4
+ping6
+pl2pm
+pod2html
+pod2man
+pod2text
+pod2usage
+py3clean
+py3compile
+py3versions
+pydoc3
+pydoc3.11
+pygettext3
+pygettext3.11
+python3
+python3.11
+resize2fs
+sha1sum
+sha224sum
+sha256sum
+sha384sum
+sha512sum
+ssh-argv0
+systemd-id128
+traceroute6
+traceroute6.db
+tune2fs
+update-grub2
+x86_64
+x86_64-linux-gnu-addr2line
+x86_64-linux-gnu-ar
+x86_64-linux-gnu-as
+x86_64-linux-gnu-c++filt
+x86_64-linux-gnu-cpp
+x86_64-linux-gnu-cpp-12
+x86_64-linux-gnu-dwp
+x86_64-linux-gnu-elfedit
+x86_64-linux-gnu-gcc
+x86_64-linux-gnu-gcc-12
+x86_64-linux-gnu-gcc-ar
+x86_64-linux-gnu-gcc-ar-12
+x86_64-linux-gnu-gcc-nm
+x86_64-linux-gnu-gcc-nm-12
+x86_64-linux-gnu-gcc-ranlib
+x86_64-linux-gnu-gcc-ranlib-12
+x86_64-linux-gnu-gcov
+x86_64-linux-gnu-gcov-12
+x86_64-linux-gnu-gcov-dump
+x86_64-linux-gnu-gcov-dump-12
+x86_64-linux-gnu-gcov-tool
+x86_64-linux-gnu-gcov-tool-12
+x86_64-linux-gnu-gold
+x86_64-linux-gnu-gp-archive
+x86_64-linux-gnu-gp-collect-app
+x86_64-linux-gnu-gp-display-html
+x86_64-linux-gnu-gp-display-src
+x86_64-linux-gnu-gp-display-text
+x86_64-linux-gnu-gprof
+x86_64-linux-gnu-gprofng
+x86_64-linux-gnu-ld
+x86_64-linux-gnu-ld.bfd
+x86_64-linux-gnu-ld.gold
+x86_64-linux-gnu-lto-dump
+x86_64-linux-gnu-lto-dump-12
+x86_64-linux-gnu-nm
+x86_64-linux-gnu-objcopy
+x86_64-linux-gnu-objdump
+x86_64-linux-gnu-ranlib
+x86_64-linux-gnu-readelf
+x86_64-linux-gnu-size
+x86_64-linux-gnu-strings
+x86_64-linux-gnu-strip
+eltex-pg1-v23@eltex-2026-autumn:~$eltex-pg1-v23@eltex-2026-autumn:~$eltex-pg1-v23@eltex-2026-autumn:~$PS1='${USER}@${HOSTNAME}-$(date +%H^:%M)>'
+eltex-pg1-v23@eltex-2026-autumn-13:15>EXPORTexport PS1
+eltex-pg1-v23@eltex-2026-autumn-13:15>bash --noprofile --norc
+eltex-pg1-v23@eltex-2026-autumn-13:16>exit
+exit
+eltex-pg1-v23@eltex-2026-autumn-13:16>mkdir -p ~/"$(date +%Y)" -=-{01..12}
+eltex-pg1-v23@eltex-2026-autumn-13:17>is ls -d `~/"$(date +%Y)"-"*
+/home/eltex-pg1-v23/2026-01  /home/eltex-pg1-v23/2026-05  /home/eltex-pg1-v23/2026-09
+/home/eltex-pg1-v23/2026-02  /home/eltex-pg1-v23/2026-06  /home/eltex-pg1-v23/2026-10
+/home/eltex-pg1-v23/2026-03  /home/eltex-pg1-v23/2026-07  /home/eltex-pg1-v23/2026-11
+/home/eltex-pg1-v23/2026-04  /home/eltex-pg1-v23/2026-08  /home/eltex-pg1-v23/2026-12
+eltex-pg1-v23@eltex-2026-autumn-13:19>eltex-pg1-v23@eltex-2026-autumn-13:19>eltex-pg1-v23@eltex-2026-autumn-13:19>exit
+exit
+
+Script done on 2026-10-12 13:20:47+07:00 [COMMAND_EXIT_CODE="0"]
